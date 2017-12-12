@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: zperfet's blog
 subtitle:
 description:
-author: John Doe
-language:
+author: zperfet
+language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://zperfet.com/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -80,3 +80,11 @@ deploy:
   type: git
   repo: git@github.com:zperfet/zperfet.github.io.git
   branch: master
+
+# cdn
+cdn:
+  enable: true
+# bootcdn support: font-awesome,fancybox
+  server: bootcdn
+# 360cdn support:font_lato,fancybox,font-awesome(only 4.2.0)
+# server: 360cdn
