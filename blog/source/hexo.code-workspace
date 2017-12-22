@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "_posts"
+		},
+		{
+			"path": "/Users/zperfet/HexoBlog/blog"
 		}
 	]
 }

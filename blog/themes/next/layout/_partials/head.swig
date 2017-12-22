@@ -56,23 +56,11 @@
 
 
 {% if theme.fancybox %}
-
-	{% if theme.cdn.enable %}
-    	{% if theme.cdn.server == "360cdn" %}
-      	<link href="http://libs.useso.com/js/fancybox/2.1.5/jquery.fancybox.css" 			rel="stylesheet" type="text/css"/>
-    {% elif theme.cdn.server == "bootcdn" %}
-      <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css" rel="stylesheet" type="text/css"/>
-    {% endif %}  
-  	{% else %}  
-    <link href="{{ url_for(theme.vendors) }}/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
-  	{% endif %}
-
-#  {% set fancybox_css_uri = url_for(theme.vendors._internal + '/fancybox/source/#jquery.fancybox.css?v=2.1.5') %}
-#  {% if theme.vendors.fancybox_css %}
-#    {% set fancybox_css_uri = theme.vendors.fancybox_css %}
-#  {% endif %}
-#  <link href="{{ fancybox_css_uri }}" rel="stylesheet" type="text/css" />
-
+  {% set fancybox_css_uri = url_for(theme.vendors._internal + '/fancybox/source/jquery.fancybox.css?v=2.1.5') %}
+  {% if theme.vendors.fancybox_css %}
+    {% set fancybox_css_uri = theme.vendors.fancybox_css %}
+  {% endif %}
+  <link href="{{ fancybox_css_uri }}" rel="stylesheet" type="text/css" />
 {% endif %}
 
 {% include "./head/external-fonts.swig" %}

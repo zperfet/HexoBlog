@@ -192,7 +192,7 @@ create_mnist.sh用来创建Mnist数据集的LMDB文件。
             index_set = dict()
             for i in range(len(classes)):
                 index_set[i] = list()
-            
+
             # 将图片划分到对应的类别
             for name_cnt, name in enumerate(pic_names):
                 # 这里默认文件名中信息以_分割，第一个信息是图片所属类别
