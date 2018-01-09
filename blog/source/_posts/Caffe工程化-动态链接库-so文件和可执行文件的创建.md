@@ -29,7 +29,7 @@ Caffe官方提供了强大的cmake支持，具体内容可见[官方PR](https:/
 >from opencv/build/ copy OpencvConfig.cmake and OpenCVModules.cmake to opencv/cmake/
 then in you project delete file build and run again cmake .. and make
 
-具体操作为
+即为
 
 * 将opencv/build下的OpencvConfig.cmake和OpenCVModules.cmake拷贝到opencv/cmake/
 * 删除cmake_buid文件夹，再从头开始
@@ -124,7 +124,7 @@ cmake-gui: A Qt-based GUI.
 包cmake-curses-gui包含了ccmake，所以可以这样[安装ccmake](https://askubuntu.com/questions/121797/how-do-i-install-ccmake)
 >sudo apt-get install cmake-curses-gui
 
-那解决方案2呢？我们可以看到这里使用ccmake也只是在make之前将CUDA_USE_STATIC_CUDA_RUNTIME从ON修改为OFF。更简单的方法是直接打开CMakeCache.txt文件，将CUDA_USE_STATIC_CUDA_RUNTIME从ON修改为OFF，再继续make即可。后面应该可以成功make完到100%了。
+那解决方案2呢？我们可以看到这里使用ccmake也只是在make之前将CUDA_USE_STATIC_CUDA_RUNTIME从ON修改为OFF。更简单的方法是直接打开CMakeCache.txt文件，将CUDA_USE_STATIC_CUDA_RUNTIME从ON修改为OFF，再继续make即可。后面我没有碰到其他问题，成功make到100%。
 
 ## CMakeLists范例
 
