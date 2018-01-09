@@ -1,0 +1,26 @@
+1.希望重新生成模型，snapshot_prefix出问题
+pic-1
+
+1)将snapshot_prefix修改为绝对路径-fail
+2)权限问题-work
+finish
+
+2.缺少文件caffe/proto/caffe.pb.h
+pic-2
+
+1)https://github.com/BVLC/caffe/issues/1761 -work
+In the directory you installed Caffe to
+
+protoc src/caffe/proto/caffe.proto --cpp_out=.
+mkdir include/caffe/proto
+mv src/caffe/proto/caffe.pb.h include/caffe/proto
+
+3.vgg-16的输入是否一定需要224*224
+
+4.vgg-16 mdb_status==2(2vs0)
+pic-4
+1)change relativa path to abs path-fail
+2)检查lmdb文件夹是否为空-work
+
+5.datum_height>=crop_size
+pic-5
